@@ -75,7 +75,7 @@ function Carousel({ items }) {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  transition={{ duration: 0.8, ease: "easeInOut" }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
                   className="max-w-full max-h-full object-contain"
                   onMouseEnter={() => setHovered(true)}
                   onMouseLeave={() => setHovered(false)}
