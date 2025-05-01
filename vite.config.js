@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: "/vite-react-deploy",
+  base: "/mishawokeup",
 })
