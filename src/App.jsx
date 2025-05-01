@@ -8,8 +8,8 @@ function App() {
     <div className="flex flex-col min-h-screen bg-white text-black">
       {/* Header */}
       <header className=" w-full bg-white z-50">
-        <div className="flex items-center justify-center py-4">
-          <img src="src/assets/logo.png" alt="Logo" className="h-12" />
+        <div className="flex items-center justify-center py-4 mb-5">
+          <img src="/mishawokeup/logo.png" alt="Logo" className="h-12" />
         </div>
       </header>
 
@@ -23,7 +23,7 @@ function App() {
       {/* Footer */}
       <footer className="w-full bg-white">
         <div className="flex items-center justify-center py-3">
-          <p className="text-sm">&copy; 2025 Mishawokeup. All rights reserved.</p>
+          <p className="text-sm">&copy; 2025 Mihhail Zaytsev. All rights reserved.</p>
         </div>
       </footer>
     </div>
