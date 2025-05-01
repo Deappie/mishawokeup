@@ -37,6 +37,18 @@ function Carousel({ items }) {
   }, [hovered, activeIndex, items]);
   
 
+  useEffect(() => {
+    const handleTouchOutside = (e) => {
+      if (!e.target.closest('.carousel-image')) {
+        setHovered(false);
+      }
+    };
+  
+    document.addEventListener('touchstart', handleTouchOutside);
+    return () => document.removeEventListener('touchstart', handleTouchOutside);
+  }, []);
+
+
   const goTo = (index) => {
     setActiveIndex(index);
     setSlideIndex(0);
@@ -63,9 +75,11 @@ function Carousel({ items }) {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
+                  transition={{ duration: 0.8, ease: "easeInOut" }}
                   className="max-w-full max-h-full object-contain"
                   onMouseEnter={() => setHovered(true)}
                   onMouseLeave={() => setHovered(false)}
+                  onTouchStart={() => setHovered(true)}
                 />
               </AnimatePresence>
             </div>
